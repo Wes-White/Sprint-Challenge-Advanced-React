@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import axios from "axios";
 
 import "./App.css";
 import PlayersList from "./components/PlayersList";
+import Nav from "./components/Nav";
 
 class App extends React.Component {
   constructor() {
@@ -23,6 +24,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <h1>Women's World Cup</h1>
+        <Nav />
         <PlayersList data={this.state.players} />
       </div>
     );
