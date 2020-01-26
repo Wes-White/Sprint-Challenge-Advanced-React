@@ -4,25 +4,29 @@ import axios from "axios";
 import "./App.css";
 import PlayersList from "./components/PlayersList";
 
-function App() {
-  const [players, setPlayers] = useState([]);
+class App extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      players: []
+    };
+  }
 
-  useEffect(() => {
+  componentDidMount() {
     axios
       .get("http://localhost:5000/api/players")
-      .then(res => {
-        const data = res.data;
-        setPlayers(data);
-      })
+      .then(res => this.setState({ players: res.data }))
       .catch(err => console.log("error", "Unable to find the data."));
-  }, []);
-  console.log(players);
-  return (
-    <div className="App">
-      <h1>Women's World Cup</h1>
-      <PlayersList data={players} />
-    </div>
-  );
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <h1>Women's World Cup</h1>
+        <PlayersList data={this.state.players} />
+      </div>
+    );
+  }
 }
 
 export default App;
