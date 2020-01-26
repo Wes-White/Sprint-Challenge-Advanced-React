@@ -2,8 +2,41 @@
   text-align: center;
 }
 
-.on-field {
+body {
   background-image: url("./img/soccerBg.jpg");
   background-size: contain;
   height: 100vh;
+}
+.on-field {
+  background-image: url("./img/onBg.png");
+  background-size: contain;
+  height: 100vh;
+}
+.btn {
+  margin: 0 auto;
+  margin-bottom: 30px;
+  width: 160px;
+}
+.card {
+  width: 400px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  font-family: "Gugi", cursive;
+  font-size: 18px;
+  color: black;
+}
+
+.card-body {
+  background: whitesmoke;
+}
+
+.title {
+  font-family: "Faster One", cursive;
+  font-size: 80px;
+  color: aliceblue;
+}
+
+h2 {
+  font-family: "Faster One", cursive;
+  color: aliceblue;
 }

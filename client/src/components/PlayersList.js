@@ -1,4 +1,12 @@
 import React from "react";
+import {
+  Card,
+  CardImg,
+  CardText,
+  CardBody,
+  CardTitle,
+  CardSubtitle
+} from "reactstrap";
 
 const PlayersList = props => {
   return (
@@ -6,10 +14,20 @@ const PlayersList = props => {
       {props.data.map(player => {
         return (
           <>
-            <img src={player.img} />
-            <h2>{player.name}</h2>
-            <p>{player.country}</p>
-            <p>{player.searches}</p>
+            <Card className="shadow lg">
+              <CardImg
+                top
+                width="100%"
+                src={player.img}
+                alt="Flag"
+                key={player.id}
+              />
+              <CardBody>
+                <CardTitle>Name: {player.name}</CardTitle>
+                <CardSubtitle>Country: {player.country}</CardSubtitle>
+                <CardText>Searches: {player.searches}</CardText>
+              </CardBody>
+            </Card>
           </>
         );
       })}

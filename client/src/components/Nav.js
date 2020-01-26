@@ -1,5 +1,6 @@
 import React from "react";
 import useOnField from "../hooks/useOnField";
+import { Button } from "reactstrap";
 
 const Nav = () => {
   const [onField, setOnField] = useOnField();
@@ -11,13 +12,13 @@ const Nav = () => {
 
   return (
     <nav>
-      <h1>Star Players</h1>
+      <h2>Star Players</h2>
       <div className="nav">
-        <div onClick={toggleonField}>
+        <div onClick={toggleonField} className="btn">
           {onField ? (
-            <button className="btn">Off the feild</button>
+            <Button>Off the feild</Button>
           ) : (
-            <button className="btn">On the feild</button>
+            <Button>On the feild</Button>
           )}
         </div>
       </div>
