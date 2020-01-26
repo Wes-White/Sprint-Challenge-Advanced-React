@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 
 import "./App.css";
+import PlayersList from "./components/PlayersList";
 
 function App() {
   const [players, setPlayers] = useState([]);
@@ -16,7 +17,12 @@ function App() {
       .catch(err => console.log("error", "Unable to find the data."));
   }, []);
   console.log(players);
-  return <div className="App"></div>;
+  return (
+    <div className="App">
+      <h1>Women's World Cup</h1>
+      <PlayersList data={players} />
+    </div>
+  );
 }
 
 export default App;
