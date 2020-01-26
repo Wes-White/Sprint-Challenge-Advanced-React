@@ -1,8 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
+import Nav from "./components/Nav";
 import playerData from "../../data.js";
 import { render } from "@testing-library/react";
+
 it("renders without crashing", () => {
   const div = document.createElement("div");
   ReactDOM.render(<App />, div);
@@ -17,4 +19,8 @@ test("Player data is present", () => {
 
 test("App renders without crashing", () => {
   render(<App />);
+});
+
+test("Nav renders without crashing(on-field works? )", () => {
+  render(<Nav />);
 });

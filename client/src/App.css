@@ -2,7 +2,8 @@
   text-align: center;
 }
 
-.dark-mode {
-  background-color: black;
-  color: white;
+.on-field {
+  background-image: url("./img/soccerBg.jpg");
+  background-size: contain;
+  height: 100vh;
 }

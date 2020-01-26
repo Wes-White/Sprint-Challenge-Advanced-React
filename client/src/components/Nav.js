@@ -1,23 +1,23 @@
 import React from "react";
-import useDarkMode from "../hooks/useDarkMode";
+import useOnField from "../hooks/useOnField";
 
 const Nav = () => {
-  const [darkMode, setDarkMode] = useDarkMode();
+  const [onField, setOnField] = useOnField();
 
-  const toggleDarkMode = e => {
+  const toggleonField = e => {
     e.preventDefault();
-    setDarkMode(!darkMode);
+    setOnField(!onField);
   };
 
   return (
     <nav>
       <h1>Star Players</h1>
       <div className="nav">
-        <div onClick={toggleDarkMode}>
-          {darkMode ? (
-            <button className="btn">Come this way to the light</button>
+        <div onClick={toggleonField}>
+          {onField ? (
+            <button className="btn">Off the feild</button>
           ) : (
-            <button className="btn">Take me to the Dark Side</button>
+            <button className="btn">On the feild</button>
           )}
         </div>
       </div>

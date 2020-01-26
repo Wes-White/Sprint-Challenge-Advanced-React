@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 const useLocalStorage = (key, initialValue) => {
-  //the key is what local storage will use to store the value that is comming from useDarkMode (in this case it is dark-mode) and the initialValue is what the value currently is we have it set to false initally in the NavBar
+  //the key is what local storage will use to store the value that is comming from useOnField (in this case it is dark-mode) and the initialValue is what the value currently is we have it set to false initally in the NavBar
 
   const [storedValue, setStoredValue] = useState(() => {
     const item = window.localStorage.getItem(key); // Gets the item from storage in our caes darkmode.
